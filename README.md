@@ -68,7 +68,16 @@ Unimplemented.
 
 ### `qubes.syscall.Readlink`
 
-Unimplemented.
+The pathname to `readlink()` should be passed as the first line on stdin.
+
+Prints, in order, separated by NULs:
+
+* The return value of the `readlink(2)` system call
+* `errno` in case of failure, `0` otherwise
+* The size of the buffer allocated to hold the result, i.e. the size of
+* The returned path itself (or empty string if there was an error)
+
+As an incident to its operation, this service calls `lstat(2)` and `malloc(3)`. However, the return codes should be the same so you shouldn't have to worry about this.
 
 ### `qubes.syscall.Rename`
 

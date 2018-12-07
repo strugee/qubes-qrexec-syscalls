@@ -20,7 +20,7 @@ CFLAGS += -Werror -Wall -Wextra -Wpedantic -D_FORTIFY_SOURCE=2 -O9
 
 .PHONY: clean
 
-default: qubes.syscall.Access
+default: qubes.syscall.Access qubes.syscall.Readlink
 
 clean:
 	rm qubes.syscall.Access
