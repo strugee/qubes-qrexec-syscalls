@@ -21,6 +21,7 @@
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
 #include <errno.h>
 
@@ -48,5 +49,6 @@ int main()
 		printf("%i\n%i\n", r, errno);
 	}
 
+	free(line);
 	return 0;
 }
