@@ -14,7 +14,7 @@ This repository is very much a work in progress. Read-only functions will be imp
 
 These services are all-or-nothing. In the future there may be a way to limit access to a directory, similar to `chroot(2)`, but this is currently unimplemented.
 
-This is because qrexec arguments have path components sanitized out of them, it is not possible to use this as a mechanism for passing arguments.
+This is because qrexec arguments have path components sanitized out of them, so it is not possible to use this as a mechanism for passing arguments.
 
 ### `qubes.syscall.Access`
 
